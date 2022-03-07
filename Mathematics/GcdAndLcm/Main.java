@@ -19,5 +19,6 @@ public class Main {
         int num2 = sc.nextInt();
         int gcd = getGcd(num1, num2);
         System.out.println(gcd);
+        System.out.println((num1 * num2) / gcd);
     }
 }
