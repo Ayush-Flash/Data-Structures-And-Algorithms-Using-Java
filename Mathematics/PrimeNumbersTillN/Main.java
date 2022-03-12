@@ -8,7 +8,7 @@ public class Main {
         for(int i = 0 ; i < n ; i++) {
             sieve.add(i , i + 1);
         }
-        for(int i = 0 ; i*i <= n ; i++) {
+        for(int i = 0 ; i*i < n ; i++) {
             if(i == 0) {
                 sieve.set(i, -1);
             } else {
