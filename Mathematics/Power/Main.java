@@ -7,6 +7,9 @@ public class Main {
     public static int ans = -1;
 
     public static int calculate(int x, int y) {
+        if(y == 0) {
+            return 1;
+        }
         if(y == 1) {
             return x;
         }
