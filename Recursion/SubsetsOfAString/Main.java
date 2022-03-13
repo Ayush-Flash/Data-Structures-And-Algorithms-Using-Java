@@ -8,12 +8,12 @@ import java.util.*;
 public class Main {
 
     public List<String> generateSubsets(String str, String emptyStr, int index, List<String> subsets) {
-        if(index == str.length() - 1) {
+        if(index == str.length()) {
             subsets.add(emptyStr);
             return subsets;
         }
-        generateSubsets(str, emptyStr + str.charAt(index),index + 1);
-        generateSubsets(str, emptyStr,index + 1);
+        generateSubsets(str, emptyStr + str.charAt(index),index + 1, subsets);
+        generateSubsets(str, emptyStr,index + 1, subsets);
         return subsets;
     }
 
@@ -25,7 +25,7 @@ public class Main {
     public static void main(String[] args) {
         try(Scanner sc = new Scanner(System.in)) {
             String str = sc.nextLine();
-            Main mObj = new mObj();
+            Main mObj = new Main();
             System.out.println(mObj.generateSubsetOfString(str));
         }
     }
