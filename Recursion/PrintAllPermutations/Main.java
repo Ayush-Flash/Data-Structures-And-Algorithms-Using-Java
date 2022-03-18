@@ -22,11 +22,12 @@ class Solution {
     }
     
     public List<String> generateAllPermutations() {
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        int lengthOfString = str.length();
-        List<String> permutations = new ArrayList<>();
-        return findAllPermutations(str, lengthOfString - 1, permutations);
+        try(Scanner sc = new Scanner(System.in)) {
+            String str = sc.nextLine();
+            int lengthOfString = str.length();
+            List<String> permutations = new ArrayList<>();
+            return findAllPermutations(str, lengthOfString - 1, permutations);
+        }
     }
 }
 
