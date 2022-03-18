@@ -9,7 +9,7 @@ public class Main {
             return 1;
         }
         int smallOutputSurvivor = getSurvivor(numberOfPeople - 1, passCount);
-        return (smallOutputSurvivor + passCount) % numberOfPeople;
+        return (smallOutputSurvivor + passCount - 1) % numberOfPeople;
     }
     
     public static void main(String[] args) {
