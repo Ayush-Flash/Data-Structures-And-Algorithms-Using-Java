@@ -10,7 +10,7 @@ class Solution {
         
         List<String> smallerOutput = findAllPermutations(str, index - 1, permutations);
         int k = 0;
-        permutations = new ArrayList();
+        permutations = new ArrayList<String>();
         for(String permutation : smallerOutput) {
             for(int i = 0 ; i <= permutation.length() ; i++) {
                 String tempStr = permutation.substring(0, i) + str.charAt(index) + permutation.substring(i);
