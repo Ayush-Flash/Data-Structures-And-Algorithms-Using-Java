@@ -16,6 +16,19 @@ class Solution {
         }
         return currentMax;
     }
+    public int findSecondLargestElement(int arr[], int n) {
+        int currentMax = -1;
+        int previousMax = -1;
+        for(int i = 0 ; i < n; i++) {
+            if(arr[i] > currentMax) {
+                previousMax = currentMax;
+                currentMax = arr[i];
+            } else if(arr[i] > previousMax) {
+                previousMax = arr[i];
+            }
+        }
+        return (previousMax == -1) ?  currentMax : previousMax;
+    }
 }
 
 public class Main {
@@ -28,6 +41,7 @@ public class Main {
             }
             Solution sObj = new Solution();
             System.out.println(sObj.findMaxElement(arr, n));
+            System.out.println(sObj.findSecondLargestElement(arr, n));
         }
     }
 }
